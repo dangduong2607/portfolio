@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Models Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--light-color);
+            font-weight: 300;
+        }
+        
+        .portfolio-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-top: 0;
+            border-bottom: 2px solid var(--light-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .file-selector {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        select {
+            padding: 0.8rem 1rem;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+        
+        select:focus {
+            border-color: var(--secondary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-download {
+            background-color: var(--accent-color);
+        }
+        
+        .btn-download:hover {
+            background-color: #c0392b;
+        }
+        
+        .file-info {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: var(--light-color);
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .file-info.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 1rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        @media (min-width: 768px) {
+            .file-selector {
+                flex-direction: row;
+                align-items: center;
+            }
+            
+            select {
+                flex-grow: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Financial Models Portfolio</h1>
+            <p class="subtitle">Professional financial analysis and modeling projects</p>
+        </header>
+        
+        <section class="portfolio-section">
+            <h2>My Financial Projects</h2>
+            <p>Browse and download my financial models and analysis projects. Each file has been carefully crafted to demonstrate financial expertise and analytical skills.</p>
+            
+            <div class="file-selector">
+                <select id="fileDropdown">
+                    <option value="">Select a file...</option>
+                    <option value="0">Crocs Financial Model.xlsx</option>
+                    <option value="1">Stock Screening Final.xlsx</option>
+                    <option value="2">ANTA Sports Financial Model.xlsx</option>
+                    <option value="3">JYP Financial Model.xlsx</option>
+                    <option value="4">TSMC Financial Model.xlsx</option>
+                    <option value="5">Crocs Financial Model.xlsx</option>
+                    <option value="6">BYD Company Financial Model.xlsx</option>
+                    <option value="7">S-REIT Selection.xlsx</option>
+                    <option value="8">AquaNova Project Finance Model.xlsx</option>
+                    <option value="9">Adani Ports Financial Model (Credit Rating Model).xlsx</option>
+                    <option value="10">Merger - Tencent and JYP (Accretion Dilution Model).xlsx</option>
+                    <option value="11">Dynamic Monte Carlo Simulation.xlsx</option>
+                    <option value="12">Tencent Financial Model.xlsx</option>
+                    <option value="13">Mineral Resources Financial Model.xlsx</option>
+                    <option value="14">WuXi Biologics Financial Model.xlsx</option>
+                    <option value="15">DBS Financial Model (Residual Income, Dividend Discount, Comps).xlsx</option>
+                    <option value="16">Linde India Financial Model.xlsx</option>
+                    <option value="17">Analysis for Good Class Bungalow Investment_DCF_Trading Comps_Regression_PowerPivot.xlsx</option>
+                    <option value="18">Basic 3 Statement Model.xlsx</option>
+                    <option value="19">TSMC Simple DCF.xlsx</option>
+                    <option value="20">The Big Short Movie Group Presentation.pptx</option>
+                    <option value="21">Dynamic Efficient Frontier for Portfolio Allocation_Any Stocks.ipynb</option>
+                    <option value="22">SIA Financial Model.xlsx</option>
+                    <option value="23">Bath & Body Works Analysis (LBO Modeling).xlsx</option>
+                    <option value="24">Coca-Cola Financial Model.xlsx</option>
+                    <option value="25">P&G Financial Model.xlsx</option>
+                    <option value="26">Tesla Analysis.xlsx</option>
+                </select>
+                <button id="downloadBtn" class="btn btn-download" disabled>
+                    <i class="fas fa-download"></i> Download
+                </button>
+            </div>
+            
+            <div id="fileInfo" class="file-info">
+                <h3 id="fileName"></h3>
+                <p id="fileDescription"></p>
+                <p><strong>Type:</strong> <span id="fileType"></span></p>
+                <p><strong>Access:</strong> <span id="fileAccess">Available for download</span></p>
+            </div>
+        </section>
+        
+        <section class="portfolio-section">
+            <h2>About This Portfolio</h2>
+            <p>This collection represents professional work in financial modeling, analysis, and related projects. Each model demonstrates different aspects of financial expertise, from valuation techniques to risk assessment and forecasting.</p>
+            <p>The files are stored securely in Google Drive and can be downloaded for review.</p>
+            <p>Full portfolio folder: <a href="https://drive.google.com/drive/folders/1SnfXXu_PBD1ezj6c3MJJlmUqV8uby6wa?usp=drive_link" target="_blank">View on Google Drive</a></p>
+        </section>
+        
+        <footer>
+            <p>&copy; <span id="year"></span> Financial Models Portfolio. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // File data with direct download links
+        const files = [
+            {
+                name: "Crocs Financial Model.xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=1roFOoyLswdhk2NQkInQwo5RFEfkGUfPY"
+            },
+            {
+                name: "Stock Screening Final.xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=1JQ7_7zRLZA084PqWHKqYyfRXElsLAymB"
+            },
+            {
+                name: "ANTA Sports Financial Model.xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=1zRXAmc-hfHVo8RsgtXG7wr0Yv8bFuSFm"
+            },
+            {
+                name: "JYP Financial Model.xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=17bJBkNQ0-neAzN1f4xIS8QMEaRSln5hg"
+            },
+            {
+                name: "TSMC Financial Model.xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=1gNOOES8hu9X3YjsQZ-kGBXcK68chgBK2"
+            },
+            {
+                name: "Crocs Financial Model.xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=1JUNznxkBUQy9bTBXRMnfIX5f8fB0i_rl"
+            },
+            {
+                name: "BYD Company Financial Model.xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=1JUNznxkBUQy9bTBXRMnfIX5f8fB0i_rl"
+            },
+            {
+                name: "S-REIT Selection.xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=1Z6xc3q34H1T3jUmdhVHUPJ_YA5Wk53JR"
+            },
+            {
+                name: "AquaNova Project Finance Model.xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=1R-B8qUaXba_9ICOENW-759CVzyoL1MFc"
+            },
+            {
+                name: "Adani Ports Financial Model (Credit Rating Model).xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=1_8CnsOF1Hv6D_GERf3hYFKJkONlwjuRf"
+            },
+            {
+                name: "Merger - Tencent and JYP (Accretion Dilution Model).xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=1Y7pvQQ6TPY2iY9pR9uDqTUeJ73lOo3Bd"
+            },
+            {
+                name: "Dynamic Monte Carlo Simulation.xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=15DPYbtKtt9vj5ABWnXPkG-6Ag8LzSovU"
+            },
+            {
+                name: "Tencent Financial Model.xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=1yjKb93HYsAn56aIl1BS6EMhhQkuV9fWS"
+            },
+            {
+                name: "Mineral Resources Financial Model.xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=1afd49vkLVpfMlYJ0JTgU7IVaF4ysNEbx"
+            },
+            {
+                name: "WuXi Biologics Financial Model.xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=1iLp_WEFuK_O--_i8S3FFxuTy47g-Hnsz"
+            },
+            {
+                name: "DBS Financial Model (Residual Income, Dividend Discount, Comps).xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=1McM4axVMlAeIpdYv2FY5IY5X1zFfx6-a"
+            },
+            {
+                name: "Linde India Financial Model.xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=1fxuez8SWKnrXxlnvnQgnmNbeCB0blsmu"
+            },
+            {
+                name: "Analysis for Good Class Bungalow Investment_DCF_Trading Comps_Regression_PowerPivot.xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=17BeXmGEbo-5aLk3uBpeFih9mbP5f_G4S"
+            },
+            {
+                name: "Basic 3 Statement Model.xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=1HMEeBUAVyVuINlmHCYLTIwBrjww11UI5"
+            },
+            {
+                name: "TSMC Simple DCF.xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=1gBiXKjuZhJUA9iv-jUrlWQUzJkOVtPYT"
+            },
+            {
+                name: "The Big Short Movie Group Presentation.pptx",
+                type: "PowerPoint Presentation",
+                url: "https://drive.google.com/uc?export=download&id=1HXuR0S5GZJsEBrP9Xb_9IwiKk9okl6zI"
+            },
+            {
+                name: "Dynamic Efficient Frontier for Portfolio Allocation_Any Stocks.ipynb",
+                type: "Jupyter Notebook",
+                url: "https://drive.google.com/uc?export=download&id=10BrlSACG40IUJPeucgGKdZJ_9wLgDVdc"
+            },
+            {
+                name: "SIA Financial Model.xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=1YtYCt7iuAlz0yATPmXCHHiZG3t0ArNJK"
+            },
+            {
+                name: "Bath & Body Works Analysis (LBO Modeling).xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=1ejm8cIlIcnJE1TUuYu9RrOhcVUjvkjzt"
+            },
+            {
+                name: "Coca-Cola Financial Model.xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=1Xgteq7WGEhv8TqMkzWfsL6yEEgMh7CSJ"
+            },
+            {
+                name: "P&G Financial Model.xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=1W2CCxW4ZoGjrz9rX3M8tYkp9VvqsMPO-"
+            },
+            {
+                name: "Tesla Analysis.xlsx",
+                type: "Excel Spreadsheet",
+                url: "https://drive.google.com/uc?export=download&id=159kiipK40mWQHunBR_jfSL2QuHizjoDs"
+            }
+        ];
+
+        // DOM elements
+        const fileDropdown = document.getElementById('fileDropdown');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const fileInfo = document.getElementById('fileInfo');
+        const fileName = document.getElementById('fileName');
+        const fileDescription = document.getElementById('fileDescription');
+        const fileType = document.getElementById('fileType');
+        const yearSpan = document.getElementById('year');
+
+        // Set current year in footer
+        yearSpan.textContent = new Date().getFullYear();
+
+        // Handle file selection
+        fileDropdown.addEventListener('change', function() {
+            const selectedIndex = this.value;
+            
+            if (selectedIndex === "") {
+                downloadBtn.disabled = true;
+                fileInfo.classList.remove('show');
+                return;
+            }
+            
+            downloadBtn.disabled = false;
+            const selectedFile = files[selectedIndex];
+            
+            // Update file info
+            fileName.textContent = selectedFile.name;
+            fileType.textContent = selectedFile.type;
+            
+            // Set download button href
+            downloadBtn.onclick = function() {
+                window.open(selectedFile.url, '_blank');
+            };
+            
+            // Show file info
+            fileInfo.classList.add('show');
+        });
+    </script>
+</body>
+</html>
