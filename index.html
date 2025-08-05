@@ -48,6 +48,14 @@
             margin-bottom: 0.5rem;
         }
         
+        .portfolio-author {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin: 0.5rem 0 1rem 0;
+            color: var(--light-color);
+        }
+        
         .subtitle {
             font-size: 1.2rem;
             color: var(--light-color);
@@ -162,6 +170,7 @@
     <div class="container">
         <header>
             <h1>Financial Models Portfolio</h1>
+            <div class="portfolio-author">Dang Duong Nguyen</div>
             <p class="subtitle">Professional financial analysis and modeling projects</p>
         </header>
         
@@ -177,28 +186,27 @@
                     <option value="2">ANTA Sports Financial Model.xlsx</option>
                     <option value="3">JYP Financial Model.xlsx</option>
                     <option value="4">TSMC Financial Model.xlsx</option>
-                    <option value="5">Crocs Financial Model.xlsx</option>
-                    <option value="6">BYD Company Financial Model.xlsx</option>
-                    <option value="7">S-REIT Selection.xlsx</option>
-                    <option value="8">AquaNova Project Finance Model.xlsx</option>
-                    <option value="9">Adani Ports Financial Model (Credit Rating Model).xlsx</option>
-                    <option value="10">Merger - Tencent and JYP (Accretion Dilution Model).xlsx</option>
-                    <option value="11">Dynamic Monte Carlo Simulation.xlsx</option>
-                    <option value="12">Tencent Financial Model.xlsx</option>
-                    <option value="13">Mineral Resources Financial Model.xlsx</option>
-                    <option value="14">WuXi Biologics Financial Model.xlsx</option>
-                    <option value="15">DBS Financial Model (Residual Income, Dividend Discount, Comps).xlsx</option>
-                    <option value="16">Linde India Financial Model.xlsx</option>
-                    <option value="17">Analysis for Good Class Bungalow Investment_DCF_Trading Comps_Regression_PowerPivot.xlsx</option>
-                    <option value="18">Basic 3 Statement Model.xlsx</option>
-                    <option value="19">TSMC Simple DCF.xlsx</option>
-                    <option value="20">The Big Short Movie Group Presentation.pptx</option>
-                    <option value="21">Dynamic Efficient Frontier for Portfolio Allocation_Any Stocks.ipynb</option>
-                    <option value="22">SIA Financial Model.xlsx</option>
-                    <option value="23">Bath & Body Works Analysis (LBO Modeling).xlsx</option>
-                    <option value="24">Coca-Cola Financial Model.xlsx</option>
-                    <option value="25">P&G Financial Model.xlsx</option>
-                    <option value="26">Tesla Analysis.xlsx</option>
+                    <option value="5">BYD Company Financial Model.xlsx</option>
+                    <option value="6">S-REIT Selection.xlsx</option>
+                    <option value="7">AquaNova Project Finance Model.xlsx</option>
+                    <option value="8">Adani Ports Financial Model (Credit Rating Model).xlsx</option>
+                    <option value="9">Merger - Tencent and JYP (Accretion Dilution Model).xlsx</option>
+                    <option value="10">Dynamic Monte Carlo Simulation.xlsx</option>
+                    <option value="11">Tencent Financial Model.xlsx</option>
+                    <option value="12">Mineral Resources Financial Model.xlsx</option>
+                    <option value="13">WuXi Biologics Financial Model.xlsx</option>
+                    <option value="14">DBS Financial Model (Residual Income, Dividend Discount, Comps).xlsx</option>
+                    <option value="15">Linde India Financial Model.xlsx</option>
+                    <option value="16">Analysis for Good Class Bungalow Investment_DCF_Trading Comps_Regression_PowerPivot.xlsx</option>
+                    <option value="17">Basic 3 Statement Model.xlsx</option>
+                    <option value="18">TSMC Simple DCF.xlsx</option>
+                    <option value="19">The Big Short Movie Group Presentation.pptx</option>
+                    <option value="20">Dynamic Efficient Frontier for Portfolio Allocation_Any Stocks.ipynb</option>
+                    <option value="21">SIA Financial Model.xlsx</option>
+                    <option value="22">Bath & Body Works Analysis (LBO Modeling).xlsx</option>
+                    <option value="23">Coca-Cola Financial Model.xlsx</option>
+                    <option value="24">P&G Financial Model.xlsx</option>
+                    <option value="25">Tesla Analysis.xlsx</option>
                 </select>
                 <button id="downloadBtn" class="btn btn-download" disabled>
                     <i class="fas fa-download"></i> Download
@@ -207,7 +215,6 @@
             
             <div id="fileInfo" class="file-info">
                 <h3 id="fileName"></h3>
-                <p id="fileDescription"></p>
                 <p><strong>Type:</strong> <span id="fileType"></span></p>
                 <p><strong>Access:</strong> <span id="fileAccess">Available for download</span></p>
             </div>
@@ -221,7 +228,7 @@
         </section>
         
         <footer>
-            <p>&copy; <span id="year"></span> Financial Models Portfolio. All rights reserved.</p>
+            <p>&copy; <span id="year"></span> Dang Duong Nguyen. All rights reserved.</p>
         </footer>
     </div>
 
@@ -252,11 +259,6 @@
                 name: "TSMC Financial Model.xlsx",
                 type: "Excel Spreadsheet",
                 url: "https://drive.google.com/uc?export=download&id=1gNOOES8hu9X3YjsQZ-kGBXcK68chgBK2"
-            },
-            {
-                name: "Crocs Financial Model.xlsx",
-                type: "Excel Spreadsheet",
-                url: "https://drive.google.com/uc?export=download&id=1JUNznxkBUQy9bTBXRMnfIX5f8fB0i_rl"
             },
             {
                 name: "BYD Company Financial Model.xlsx",
@@ -370,7 +372,6 @@
         const downloadBtn = document.getElementById('downloadBtn');
         const fileInfo = document.getElementById('fileInfo');
         const fileName = document.getElementById('fileName');
-        const fileDescription = document.getElementById('fileDescription');
         const fileType = document.getElementById('fileType');
         const yearSpan = document.getElementById('year');
 
